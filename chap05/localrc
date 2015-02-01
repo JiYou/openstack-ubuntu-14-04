@@ -1,0 +1,54 @@
+#---------------------------------------------
+# PIP HOST: python package source.
+#---------------------------------------------
+
+PIP_HOST=192.168.56.110
+
+#---------------------------------------------
+# MySQL Service
+#---------------------------------------------
+
+MYSQL_ROOT_PASSWORD=mysqlpassword
+MYSQL_HOST=192.168.56.110
+
+#---------------------------------------------
+# RabbitMQ Service
+#---------------------------------------------
+
+RABBITMQ_HOST=192.168.56.110
+RABBITMQ_USER=guest
+RABBITMQ_PASSWORD=rabbit_password
+
+#---------------------------------------------
+# Keystone
+#---------------------------------------------
+
+MYSQL_KEYSTONE_USER=keystone
+MYSQL_KEYSTONE_PASSWORD=keystone_password
+KEYSTONE_HOST=192.168.56.110
+ADMIN_PASSWORD=admin_user_password
+ADMIN_TOKEN=admin_token
+SERVICE_TOKEN=$ADMIN_TOKEN
+ADMIN_USER=admin
+SERVICE_TENANT_NAME=service
+
+
+#---------------------------------------------
+# Swift Service
+#---------------------------------------------
+
+SWIFT_HOST=192.168.56.110
+SWIFT_NODE_IP=192.168.56.110
+SWIFT_NODE_IP={192.168.56.110}
+KEYSTONE_SWIFT_SERVICE_PASSWORD=keystone_swift_password
+SWIFT_DISK_PATH=/dev/loop2
+SWIFT_NODE_NIC_CARD=eth2
+
+#---------------------------------------------
+# Glance Service
+#---------------------------------------------
+
+GLANCE_HOST=192.168.56.110
+MYSQL_GLANCE_USER=glance
+MYSQL_GLANCE_PASSWORD=glance_password
+KEYSTONE_GLANCE_SERVICE_PASSWORD=keystone_glance_password
