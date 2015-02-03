@@ -81,8 +81,13 @@ if [[ ! -e ./chap08/multiplenodes/m-compute-node/init.sh ]]; then
   old_dir=`pwd`
   cd ./chap08/multiplenodes/m-compute-node
   ln -s ../../../chap03/mysql/init.sh init.sh
+  cd $old_dir
+fi
+
+if [[ ! -e ./chap06/openstacksource ]]; then
+  old_dir=`pwd`
   cd ./chap06/
-  [[ ! -e openstacksource ]] && ln -s ../package/source openstacksource
+  ln -s ../package/source openstacksource
   cd $old_dir
 fi
 
@@ -181,10 +186,17 @@ if [[ ! -e ./chap08/multiplenodes/m-controller/dashboard.sh ]]; then
   old_dir=`pwd`
   cd ./chap08/multiplenodes/m-controller
   ln -s ../../../chap09/dashboard.sh dashboard.sh
-  cd ./chap09
-  [[ ! -e openstacksource ]] && ln -s ../packages/source/ openstacksource
   cd $old_dir
 fi
+
+if [[ ! -e ./chap09/openstacksource ]]; then
+  old_dir=`pwd`
+  cd ./chap09
+  ln -s ../packages/source/ openstacksource
+  cd $old_dir
+fi
+
+
 
 if [[ ! -e ./chap08/multiplenodes/m-controller/packages ]]; then
   old_dir=`pwd`
