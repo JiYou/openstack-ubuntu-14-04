@@ -3,6 +3,8 @@ set -e
 set -o xtrace
 
 TOPDIR=$(cd $(dirname "$0") && pwd)
+cp -rf $TOPDIR/tools/nkill /usr/bin/
+chmod +x /usr/bin/nkill
 cmd_old_dir=`pwd`
 cd $TOPDIR
 cat ./create_link.sh | grep -v cat|  grep cd | grep chap | awk '{print $2}' | sort -u | xargs -i mkdir -p {}
@@ -87,6 +89,7 @@ fi
 if [[ ! -e ./chap06/openstacksource ]]; then
   old_dir=`pwd`
   cd ./chap06/
+  rm -rf openstacksource
   ln -s ../package/source openstacksource
   cd $old_dir
 fi
@@ -1605,7 +1608,6 @@ if [[ ! -e ./chap05/openstacksource ]]; then
   ln -s ../packages/source/ openstacksource
   cd $old_dir
 fi
-
 
 cd $cmd_old_dir
 set +o xtrace

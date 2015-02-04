@@ -2,22 +2,22 @@
 # PIP HOST: python package source.
 #---------------------------------------------
 
-PIP_HOST=192.168.56.110
+PIP_HOST=10.64.218.205
 
 #---------------------------------------------
 # MySQL Service
 #---------------------------------------------
 
 MYSQL_ROOT_PASSWORD=mysqlpassword
-MYSQL_HOST=192.168.56.110
+MYSQL_HOST=10.64.218.205
 
 #---------------------------------------------
 # RabbitMQ Service
 #---------------------------------------------
 
-RABBITMQ_HOST=192.168.56.110
+RABBITMQ_HOST=10.67.205.50
 RABBITMQ_USER=guest
-RABBITMQ_PASSWORD=rabbit_password
+RABBITMQ_PASSWORD=guest
 
 #---------------------------------------------
 # Keystone
@@ -25,7 +25,7 @@ RABBITMQ_PASSWORD=rabbit_password
 
 MYSQL_KEYSTONE_USER=keystone
 MYSQL_KEYSTONE_PASSWORD=keystone_password
-KEYSTONE_HOST=192.168.56.110
+KEYSTONE_HOST=10.64.218.205
 ADMIN_PASSWORD=admin_user_password
 ADMIN_TOKEN=admin_token
 SERVICE_TOKEN=$ADMIN_TOKEN
