@@ -1,5 +1,5 @@
 #!/usr/bin/expect -f
-spawn fdisk /dev/loop2
+spawn fdisk /dev/sdb
 expect "Command (m for help):"
 send "n\r"
 

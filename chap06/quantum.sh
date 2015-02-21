@@ -268,7 +268,7 @@ cd /tmp/
 tar zcf quantum.tar.gz quantum
 mkdir -p /tmp/sharedir_openstack/
 if [[ `mount | grep sharedir_openstack | wc -l` -eq 0 ]]; then
-    mount -t nfs 192.168.56.110:/var/www/html /tmp/sharedir_openstack/
+    mount -t nfs $PIP_HOST:/var/www/html /tmp/sharedir_openstack/
 fi
 
 mv quantum.tar.gz /tmp/sharedir_openstack/

@@ -1,24 +1,23 @@
-
 #---------------------------------------------
-# Python pip Sources
+# PIP HOST: python package source.
 #---------------------------------------------
 
-PIP_HOST=192.168.56.110
+PIP_HOST=192.168.56.101
 
 #---------------------------------------------
 # MySQL Service
 #---------------------------------------------
 
 MYSQL_ROOT_PASSWORD=mysqlpassword
-MYSQL_HOST=192.168.56.110
+MYSQL_HOST=192.168.56.101
 
 #---------------------------------------------
 # RabbitMQ Service
 #---------------------------------------------
 
-RABBITMQ_HOST=192.168.56.110
+RABBITMQ_HOST=192.168.56.101
 RABBITMQ_USER=guest
-RABBITMQ_PASSWORD=rabbit_password
+RABBITMQ_PASSWORD=guest
 
 #---------------------------------------------
 # Keystone
@@ -26,7 +25,7 @@ RABBITMQ_PASSWORD=rabbit_password
 
 MYSQL_KEYSTONE_USER=keystone
 MYSQL_KEYSTONE_PASSWORD=keystone_password
-KEYSTONE_HOST=192.168.56.110
+KEYSTONE_HOST=192.168.56.101
 ADMIN_PASSWORD=admin_user_password
 ADMIN_TOKEN=admin_token
 SERVICE_TOKEN=$ADMIN_TOKEN
@@ -34,12 +33,30 @@ ADMIN_USER=admin
 SERVICE_TENANT_NAME=service
 
 #---------------------------------------------
+# Glance Service
+#---------------------------------------------
+
+GLANCE_HOST=192.168.56.101
+MYSQL_GLANCE_USER=glance
+MYSQL_GLANCE_PASSWORD=glance_password
+KEYSTONE_GLANCE_SERVICE_PASSWORD=keystone_glance_password
+
+#---------------------------------------------
+# Quantum Service
+#---------------------------------------------
+
+QUANTUM_HOST=192.168.56.101
+MYSQL_QUANTUM_USER=quantum
+MYSQL_QUANTUM_PASSWORD=quantum_password
+KEYSTONE_QUANTUM_SERVICE_PASSWORD=keystone_quantum_password
+
+#---------------------------------------------
 # Cinder Service
 #---------------------------------------------
 
-CINDER_HOST=192.168.56.110
+CINDER_HOST=192.168.56.101
 MYSQL_CINDER_USER=cinder
 MYSQL_CINDER_PASSWORD=cinder_password
 KEYSTONE_CINDER_SERVICE_PASSWORD=keystone_cinder_password
 VOLUME_GROUP=cinder-volumes
-VOLUME_DISK=/dev/loop3
+VOLUME_DISK=/dev/sdc

@@ -3,4 +3,4 @@
 #---------------------------------------------
 
 MYSQL_ROOT_PASSWORD=mysqlpassword
-MYSQL_HOST=10.64.218.205
+MYSQL_HOST=192.168.56.101
