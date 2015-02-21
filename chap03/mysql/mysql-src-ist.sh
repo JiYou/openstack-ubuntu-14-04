@@ -4,29 +4,6 @@ set -e
 set +o xtrace
 
 #---------------------------------------------
-# We should create link file first.
-#---------------------------------------------
-
-function find_and_run() {
-    old_dir=`pwd`
-    fl=$1
-    num=`find . -name "$fl" | wc -l`
-    while [ $num -eq 0 ]; do
-        cd ..
-        num=`find . -name "$fl" | wc -l`
-        if [[ $num -gt 0 ]]; then
-            for x in `find . -name "$fl"`; do
-                ./$x
-            done
-        fi
-    done
-    cd $old_dir
-}
-
-find_and_run create_link.sh
-
-
-#---------------------------------------------
 # Prepare directories for installation.
 #---------------------------------------------
 

@@ -90,7 +90,7 @@ if [[ ! -e ./chap06/openstacksource ]]; then
   old_dir=`pwd`
   cd ./chap06/
   rm -rf openstacksource
-  ln -s ../package/source openstacksource
+  ln -s ../packages/source openstacksource
   cd $old_dir
 fi
 
