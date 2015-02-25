@@ -324,7 +324,13 @@ else
     DEV_PATH=`fdisk -l | grep ${DISK_PATH#*dev/*} | grep Linux | awk '{print $1}'`
 fi
 
-mkfs.xfs -f  -i size=1024 $DEV_PATH
+
+cnt=`fdisk -l $DISK_PATH | grep Linux | wc -l`
+if [[ $cnt -eq 0 ]]; then
+    mkfs.xfs -f  -i size=1024 $DEV_PATH
+fi
+
+
 n=${DEV_PATH#*dev/*}
 echo "$DEV_PATH /srv/node/sdb1 xfs noatime,nodiratime,nobarrier,logbufs=8 0 0" >> /etc/fstab
 
