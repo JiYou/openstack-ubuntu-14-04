@@ -39,13 +39,4 @@ export OS_AUTH_URL="http://$KEYSTONE_HOST:5000/v2.0/"
 echo $OS_PASSWORD
 echo $OS_AUTH_URL
 
-cnt=`glance index | grep "cirros.img" | grep ami | wc -l`
-if [[ $cnt -gt 0 ]]; then
-    img=`glance index | grep "cirros.img" | grep ami | awk '{print $1}'`
-    for n in $img; do
-        echo $n
-        glance image-update --property hw_disk_bus=ide $n
-    done
-fi
-
 set -o xtrace
