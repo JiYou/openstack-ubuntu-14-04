@@ -99,6 +99,14 @@ sed -i "s,%QUANTUM_HOST%,$QUANTUM_HOST,g" $file
 sed -i "s,%DASHBOARD_HOST%,$DASHBOARD_HOST,g" $file
 sed -i "s,%RABBITMQ_HOST%,$RABBITMQ_HOST,g" $file
 sed -i "s,%RABBITMQ_PASSWORD%,$RABBITMQ_PASSWORD,g" $file
+
+if [[ -e /usr/sbin/kvm-ok ]]; then
+    is_vm=`kvm-ok | grep NOT | wc -l`
+    if [[ $is_vm -gt 0 ]]; then
+        LIBVIRT_TYPE="qemu"
+    fi
+fi
+
 sed -i "s,%LIBVIRT_TYPE%,$LIBVIRT_TYPE,g" $file
 sed -i "s,VNCSERVER_PROXYCLIENT_ADDRESS=.*,VNCSERVER_PROXYCLIENT_ADDRESS=$HOST_IP,g" $file
 
