@@ -88,6 +88,7 @@ file=/etc/nova/nova.conf
 cp -rf $TOPDIR/templates/nova.conf $file
 
 sed -i "s,%HOST_IP%,$HOST_IP,g" $file
+sed -i "s,%SWIFT_PROXY_HOST%,$SWIFT_HOST,g" $file
 sed -i "s,%GLANCE_HOST%,$GLANCE_HOST,g" $file
 sed -i "s,%MYSQL_NOVA_USER%,$MYSQL_NOVA_USER,g" $file
 sed -i "s,%MYSQL_NOVA_PASSWORD%,$MYSQL_NOVA_PASSWORD,g" $file

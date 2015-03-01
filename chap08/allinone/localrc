@@ -33,6 +33,16 @@ ADMIN_USER=admin
 SERVICE_TENANT_NAME=service
 
 #---------------------------------------------
+# Swift Service
+#---------------------------------------------
+
+SWIFT_HOST=192.168.56.101
+SWIFT_NODE_IP={192.168.56.101}
+KEYSTONE_SWIFT_SERVICE_PASSWORD=keystone_swift_password
+SWIFT_DISK_PATH=/dev/sdb
+SWIFT_NODE_NIC_CARD=eth2
+
+#---------------------------------------------
 # Glance Service
 #---------------------------------------------
 
