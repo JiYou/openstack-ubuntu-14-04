@@ -17,8 +17,14 @@ if [[ $cnt -gt 0 ]]; then
     TOPDIR=`pwd`
 fi
 
-mkdir -p /var/www/
+mkdir -p /var/www/html/
 [[ ! -e /var/www/pip ]] && cp -rf $TOPDIR/../packages/pip /var/www/html/
+
+cd /var/www/html/pip
+cp -rf Routes/ routes
+cp -rf SQLAlchemy/ sqlalchemy
+
+cd $old_dir
 
 #---------------------------------------------------
 # Install apt packages
