@@ -26,18 +26,6 @@ cnt=`mount | grep $SWIFT_DISK_PATH | wc -l`
 if [[ $cnt -gt 0 ]]; then
     umount /srv/node/sdb1
     rm -rf /srv/node/sdb1
-cat <<"EOF">auto_fdisk.sh
-#!/usr/bin/expect -f
-spawn fdisk %DISK_PATH%
-expect "Command (m for help):"
-send "d\r"
-expect "Command (m for help):"
-send "w\r"
-expect eof
-EOF
-    sed -i "s,%DISK_PATH%,$SWIFT_DISK_PATH,g" auto_fdisk.sh
-    chmod a+x auto_fdisk.sh
-    ./auto_fdisk.sh
 fi
 
 
@@ -288,54 +276,20 @@ sed -i "s,%STOR_PATH%,$STOR_PATH,g" /etc/swift/object-server.conf
 
 
 DISK_PATH=$SWIFT_DISK_PATH
-cat <<"EOF">auto_fdisk.sh
-#!/usr/bin/expect -f
-spawn fdisk %DISK_PATH%
-expect "Command (m for help):"
-send "n\r"
-
-expect "Select*:"
-send "p\r"
-
-expect "Partition number*:"
-send "\r"
-
-expect "First sector*:"
-send "\r"
-
-expect "Last sector, +sectors or +size*:"
-send "\r"
-
-expect "Command (m for help):"
-send "w\r"
-
-expect eof
-EOF
-sed -i "s,%DISK_PATH%,$DISK_PATH,g" auto_fdisk.sh
-chmod a+x auto_fdisk.sh
-
 cd $TOPDIR
-./auto_fdisk.sh
-
-cnt=`fdisk -l | grep ${DISK_PATH#*dev/*} | grep Linux | awk '{print $1}' | wc -l`
-if [[ $cnt -eq 0 ]]; then
-    DEV_PATH=$DISK_PATH
-else
-    DEV_PATH=`fdisk -l | grep ${DISK_PATH#*dev/*} | grep Linux | awk '{print $1}'`
-fi
-
+DEV_PATH=$DISK_PATH
 
 cnt=`fdisk -l $DISK_PATH | grep Linux | wc -l`
 if [[ $cnt -eq 0 ]]; then
     mkfs.xfs -f  -i size=1024 $DEV_PATH
 fi
 
-
-n=${DEV_PATH#*dev/*}
-echo "$DEV_PATH /srv/node/sdb1 xfs noatime,nodiratime,nobarrier,logbufs=8 0 0" >> /etc/fstab
+echo "$DEV_PATH /srv/node/sdb xfs noatime,nodiratime,nobarrier,logbufs=8 0 0" >> /etc/fstab
 
 mkdir -p /srv/node/sdb1
-mount /srv/node/sdb1
+modprobe xfs
+mount $DEV_PATH /srv/node/sdb1
+
 chown -R swift:swift /srv/node
 chmod a+w -R /srv
 
