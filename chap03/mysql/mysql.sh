@@ -36,8 +36,6 @@ if [[ `cat /etc/mysql/my.cnf | grep "0.0.0.0" | wc -l` -eq 0 ]]; then
     mysqladmin -uroot password $MYSQL_ROOT_PASSWORD
 fi
 sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/my.cnf
-linenum=`cat /etc/mysql/my.cnf | grep -Hn "\[mysqld\]" | awk -F ":" '{print $2}'`
-sed -i ${cnt}askip-name-resolve /etc/mysql/my.cnf
 
 service mysql restart
 
