@@ -284,7 +284,7 @@ if [[ $cnt -eq 0 ]]; then
     mkfs.xfs -f  -i size=1024 $DEV_PATH
 fi
 
-echo "$DEV_PATH /srv/node/sdb xfs noatime,nodiratime,nobarrier,logbufs=8 0 0" >> /etc/fstab
+echo "$DEV_PATH /srv/node/sdb1 xfs noatime,nodiratime,nobarrier,logbufs=8 0 0" >> /etc/fstab
 
 mkdir -p /srv/node/sdb1
 modprobe xfs
