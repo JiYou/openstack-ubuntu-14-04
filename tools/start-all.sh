@@ -15,12 +15,12 @@ keystone user-list
 
 ./swift-proxy.sh
 ./swift-storage.sh
-sleep 1
+sleep 20
 source swiftrc
 swift stat
 
 ./glance.sh
-sleep 1
+sleep 20
 glance index
 
 ./quantum.sh
