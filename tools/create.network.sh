@@ -37,8 +37,8 @@ neutron subnet-create ext_net \
 Ext_Net_ID=`neutron net-list | grep ext_net | awk '{ print $2 }'`
 
 # 把router添加到外部网络中，添加成功之后，这个router会在外部网络中占用一个IP。
-# 比如将192.168.100.1 与10.0.2.151捆绑好。在前面创建的内网的VM要上网的时候，
-# 都从网关(192.168.100.1)出去时，openvswitch会自动把192.168.100.1处理为10.0.2.151（物理网络IP）的请求，
+# 比如将192.168.100.1 与10.0.2.150捆绑好。在前面创建的内网的VM要上网的时候，
+# 都从网关(192.168.100.1)出去时，openvswitch会自动把192.168.100.1处理为10.0.2.150（物理网络IP）的请求，
 # 从而实现了上网。
 neutron router-gateway-set $Router_ID $Ext_Net_ID
 
