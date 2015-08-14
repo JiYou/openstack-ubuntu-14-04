@@ -242,7 +242,6 @@ nkill quantum-dhcp
 nkill quantum-l3
 
 mkdir -p /var/log/quantum/
-rm -rf /var/log/quantum/quantum*
 
 nohup python /opt/stack/quantum/bin/quantum-server --config-file /etc/quantum/quantum.conf --config-file /etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini > /var/log/quantum/quantum-server.log 2>&1 &
 
