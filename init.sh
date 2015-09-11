@@ -18,6 +18,7 @@ install -y --force-yes openssh-server
 #---------------------------------------------
 
 cp -rf $TOP_DIR/tools/nkill /usr/bin/
+cp -rf $TOP_DIR/tools/start-all.sh /root/
 chmod +x /usr/bin/nkill
 
 #---------------------------------------------
