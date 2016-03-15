@@ -113,7 +113,7 @@ cat <<"EOF" > /root/quantum-agent.sh
 nkill quantum-openvswitch-agent
 mkdir -p /var/log/quantum/
 
-nohup python /opt/stack/quantum/bin/quantum-openvswitch-agent --config-file /etc/quantum/quantum.conf --config-file=/etc/quantum/l3_agent.ini > /var/log/quantum/quantum-openvswitch-agent.log 2>&1 &
+nohup python /opt/stack/quantum/bin/quantum-openvswitch-agent --config-file /etc/quantum/quantum.conf --config-file=/etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini > /var/log/quantum/quantum-openvswitch-agent.log 2>&1 &
 
 EOF
 
