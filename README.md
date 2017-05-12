@@ -26,3 +26,4 @@ http://www.tudou.com/listplay/XVZuh9OC1eg.html
 ## 高清视频 OpenStack Mitaka OpenVSwitch 自运化安装
 
 百度云中下载：https://pan.baidu.com/s/1i5FkZ6P (OpenStack开源云王者归来-Mitaka自动化安装)
+安装脚本路径：https://github.com/JiYou/openstack-m/tree/master/mitaka
