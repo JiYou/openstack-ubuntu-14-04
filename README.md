@@ -27,3 +27,6 @@ http://www.tudou.com/listplay/XVZuh9OC1eg.html
 
 百度云中下载：链接: https://pan.baidu.com/s/1ge7a61X 密码: u5h4(OpenStack开源云王者归来-Mitaka自动化安装)
 安装脚本路径：https://github.com/JiYou/openstack-m/tree/master/mitaka
+
+# Notice
+百度云盘帐号长时未用，导致失窃。重新申诉找回。之前的分享已然失效。 新的链接: https://pan.baidu.com/s/1ge7a61X 密码: u5h4
