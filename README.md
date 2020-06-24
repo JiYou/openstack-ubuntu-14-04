@@ -23,21 +23,21 @@ OpenStack
 ## 所有资源
 
 本书用到的所有资源都可以从百度云中下载：
-链接: https://pan.baidu.com/s/1-GzN-U4SGrS_raz3363e5w 提取码: jgti
+链接: https://pan.baidu.com/s/1nDJqhWRFbTVQ91aG6BlntQ 提取码: jxn6
 
 
 ## 高清原视频 OpenStack开源云王者归来-Mitaka安装 手动一步一步安装
 
 本书用到的所有资源都可以从百度云中下载：
-链接: https://pan.baidu.com/s/1-GzN-U4SGrS_raz3363e5w 提取码: jgti
+链接: https://pan.baidu.com/s/1nDJqhWRFbTVQ91aG6BlntQ 提取码: jxn6
 
 ## 高清视频 OpenStack Mitaka OpenVSwitch 自运化安装
 
 
 本书用到的所有资源都可以从百度云中下载：
-链接: https://pan.baidu.com/s/1-GzN-U4SGrS_raz3363e5w 提取码: jgti
+链接: https://pan.baidu.com/s/1nDJqhWRFbTVQ91aG6BlntQ 提取码: jxn6
 
 # Notice
 
 本书用到的所有资源都可以从百度云中下载：
-链接: https://pan.baidu.com/s/1-GzN-U4SGrS_raz3363e5w 提取码: jgti
+链接: https://pan.baidu.com/s/1nDJqhWRFbTVQ91aG6BlntQ 提取码: jxn6
