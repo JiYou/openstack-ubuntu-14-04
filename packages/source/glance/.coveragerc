@@ -1,7 +1,0 @@
-[run]
-branch = True
-source = glance
-omit = glance/tests/*,glance/openstack/*
-
-[report]
-ignore-errors = True

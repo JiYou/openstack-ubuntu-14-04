@@ -1,7 +1,0 @@
-[run]
-branch = True
-source = keystone
-omit = keystone/openstack/*
-
-[report]
-ignore-errors = True

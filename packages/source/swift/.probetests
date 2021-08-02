@@ -1,8 +1,0 @@
-#!/bin/bash
-
-cd $(dirname $0)/test/probe
-nosetests --exe
-rvalue=$?
-cd -
-
-exit $rvalue
